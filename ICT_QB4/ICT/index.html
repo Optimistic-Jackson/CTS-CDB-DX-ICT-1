@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Progress Report</title>
+
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FONT LINK -->
+    <!-- SAIRA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@100;400;500;600;700&family=Roboto:wght@100;400;500;700&family=Saira:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@100;400;500;600;700&family=Noto+Sans&family=Roboto:wght@100;400;500;700&family=Saira:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="center-cont">
+    <header>
+      <h1>Student Progress Report</h1>
+      <nav class="flex flex-hori">
+        <div class="class-cont flex flex-verti">
+          <label for="#class-input">Class</label>
+          <select id="class-input">
+            <option value="4">Class 10</option>
+            <option value="3">Class 9</option>
+            <option value="2">Class 8</option>
+            <option value="1">Class 7</option>
+            <option value="0">Class 6</option>
+          </select>
+        </div>
+        <div class="performance-cont flex flex-verti">
+          <label for="#performance-input">Performance Level</label>
+          <select id="performance-input">
+            <option value="All">All</option>
+            <option value="Above-Level">Above Level</option>
+            <option value="On-Level">On Level</option>
+            <option value="Below-Level">Below Level</option>
+          </select>
+        </div>
+        <div class="get-report">
+          <input id="get-rep-btn" type="submit" value="Get Report" />
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="shift-btn-cont">
+        <button id="left-btn">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+        <button id="right-btn">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+      <table>
+        <thead>
+          <tr class="head-row">
+            <th>
+              STUDENT
+              <a onclick="sort()" class="arrow-sym"> &#8595; </a>
+              <br />NAME
+            </th>
+            <th id="rank-head">
+              RANK
+              <a onclick="sort()" class="arrow-sym"> &#8595; </a>
+            </th>
+            <th>
+              PERFORMANCE
+              <a onclick="sort()" class="arrow-sym"> &#8595; </a>
+              <br />LEVEL
+            </th>
+            <th>
+              MID 1 SCORE
+              <a onclick="sort()" class="arrow-sym"> &#8595; </a>
+              <br />
+              OUT OF 600
+            </th>
+            <th>
+              MID 2 SCORE
+              <a onclick="sort()" class="arrow-sym"> &#8595; </a>
+              <br />
+              OUT OF 600
+            </th>
+            <th id="last-head">
+              FINAL SCORE
+              <a onclick="sort()" class="arrow-sym"> &#8595; </a>
+              <br />
+              OUT OF 600
+            </th>
+          </tr>
+        </thead>
+
+        <tbody id="table-body">
+          <!-- ADD ROWS AS PER NUMBER OF STUDENTS -->
+          <!-- TEMPLATE TO USE AS LITERAL -->
+          <!-- <tr id="student-{i}">
+            <td class="student-name" id="student-{i}-name">student-1</td>
+            <td class="student-rank" id="student-{i}-rank">1</td>
+            <td class="student-performance" id="student-{i}-performance">
+              <span>${holderArray[i].rank}</span>
+              <span>
+                <ion-icon
+                  style="color: ${icon-color};"
+                  name="ellipse"
+                ></ion-icon>
+              </span>
+              <span>${holderArray[i].peformanceLevel} </span>
+            </td>
+            <td class="student-mid-1" id="student-{i}-mid-1">1</td>
+            <td class="student-mid-2" id="student-{i}-mid-2">1</td>
+            <td class="student-final" id="student-{i}-final">1</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </main>
+    <!-- 
+
+
+
+
+
+     -->
+    <!-- SCRIPT lINKS -->
+
+    <!-- <script src="data.json"></script> -->
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
+button {
+  background-color: transparent !important;
+  border: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-hori {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-verti {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.center-cont {
+  width: 1030px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  margin: 30px 0 100px 0;
+}
+
+header h1 {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-bottom: 60px;
+}
+
+header nav {
+  width: 60%;
+  margin: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+header nav .class-cont,
+header nav .performance-cont {
+  gap: 5px;
+}
+
+header nav .class-cont label,
+header nav .performance-cont label {
+  font-weight: 700;
+  font-size: 12px;
+  font-family: Saira;
+}
+
+header nav .class-cont select,
+header nav .performance-cont select {
+  height: 40px;
+  width: 212px;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #999;
+  border: #999 1px solid;
+  border-radius: 6px;
+  -webkit-box-shadow: 0.2px 0.5px #999;
+          box-shadow: 0.2px 0.5px #999;
+  padding: 2px 10px;
+}
+
+header nav #get-rep-btn {
+  height: 40px;
+  width: 128px;
+  font-family: noto-sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  background: #009dd1;
+  color: #ffffff;
+  padding: 2px 10px !important;
+  border: none;
+  border-radius: 6px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+main {
+  position: relative;
+}
+
+main .shift-btn-cont {
+  position: absolute;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20px;
+  left: 50%;
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
+}
+
+main .shift-btn-cont button {
+  cursor: pointer;
+}
+
+main .shift-btn-cont button ion-icon {
+  color: orange;
+  font-size: 40px;
+}
+
+main table {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  -webkit-box-shadow: 0 0 2px #999;
+          box-shadow: 0 0 2px #999;
+  border-collapse: collapse;
+  text-align: center;
+  position: relative;
+}
+
+main table thead tr {
+  border-bottom: 4px solid orange;
+  border-top: 4px solid #009dd1;
+}
+
+main table thead tr th {
+  padding: 48px 20px 20px 20px;
+}
+
+main table thead tr th .arrow-sym {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+main table tbody tr td {
+  padding: 20px;
+}
+
+main table tbody tr:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+main table::before {
+  content: "Class Results";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: 14px;
+  background-color: #009dd1;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+@media (max-width: 1040px) {
+  .shift-btn-cont {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .flex-hori {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .center-cont {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+  }
+  table {
+    width: 90vw !important;
+    margin: 0 10px;
+  }
+  table tr th,
+  table tr td {
+    padding: 10px 5px !important;
+  }
+  table tr td:last-child {
+    display: none;
+  }
+  table tr th:last-child {
+    display: none;
+  }
+}
+
+@media (min-width: 1040px) {
+  th:nth-child(2) {
+    display: inline-block !important;
+  }
+  th:last-child {
+    display: inline-block !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
